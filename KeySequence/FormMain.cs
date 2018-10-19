@@ -22,9 +22,26 @@ namespace KeySequence
       {
         _keySequence += e.KeyCode.ToString();
       }
+
+      if (e.KeyCode == Keys.Left)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      if (e.KeyCode == Keys.Up)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      if (e.KeyCode == Keys.Down)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      labelActualSequenceIP.Text += _keySequence;
     }
 
-    private void button_Click(object sender, System.EventArgs e)
+    private void Button_Click_GenerateKeySequence(object sender, System.EventArgs e)
     {
 
     }

@@ -32,7 +32,9 @@
       this.labelOKNOK = new System.Windows.Forms.Label();
       this.labelInstructions = new System.Windows.Forms.Label();
       this.labelKeySeries = new System.Windows.Forms.Label();
-      this.button = new System.Windows.Forms.Button();
+      this.buttonGenerateKeySequence = new System.Windows.Forms.Button();
+      this.labelActualSequence = new System.Windows.Forms.Label();
+      this.labelActualSequenceIP = new System.Windows.Forms.Label();
       this.SuspendLayout();
       // 
       // labelSequence
@@ -47,15 +49,16 @@
       // labelOKNOK
       // 
       this.labelOKNOK.AutoSize = true;
-      this.labelOKNOK.Location = new System.Drawing.Point(202, 80);
+      this.labelOKNOK.Location = new System.Drawing.Point(185, 215);
       this.labelOKNOK.Name = "labelOKNOK";
-      this.labelOKNOK.Size = new System.Drawing.Size(0, 20);
+      this.labelOKNOK.Size = new System.Drawing.Size(111, 20);
       this.labelOKNOK.TabIndex = 1;
+      this.labelOKNOK.Text = "OK or NOT OK";
       // 
       // labelInstructions
       // 
       this.labelInstructions.AutoSize = true;
-      this.labelInstructions.Location = new System.Drawing.Point(58, 29);
+      this.labelInstructions.Location = new System.Drawing.Point(58, 91);
       this.labelInstructions.Name = "labelInstructions";
       this.labelInstructions.Size = new System.Drawing.Size(156, 20);
       this.labelInstructions.TabIndex = 2;
@@ -64,28 +67,48 @@
       // labelKeySeries
       // 
       this.labelKeySeries.AutoSize = true;
-      this.labelKeySeries.Location = new System.Drawing.Point(373, 29);
+      this.labelKeySeries.Location = new System.Drawing.Point(373, 91);
       this.labelKeySeries.Name = "labelKeySeries";
       this.labelKeySeries.Size = new System.Drawing.Size(111, 20);
       this.labelKeySeries.TabIndex = 3;
       this.labelKeySeries.Text = "down up down";
       // 
-      // button
+      // buttonGenerateKeySequence
       // 
-      this.button.Location = new System.Drawing.Point(62, 109);
-      this.button.Name = "button";
-      this.button.Size = new System.Drawing.Size(223, 44);
-      this.button.TabIndex = 4;
-      this.button.Text = "Generate key sequence";
-      this.button.UseVisualStyleBackColor = true;
-      this.button.Click += new System.EventHandler(this.button_Click);
+      this.buttonGenerateKeySequence.Location = new System.Drawing.Point(62, 12);
+      this.buttonGenerateKeySequence.Name = "buttonGenerateKeySequence";
+      this.buttonGenerateKeySequence.Size = new System.Drawing.Size(223, 44);
+      this.buttonGenerateKeySequence.TabIndex = 4;
+      this.buttonGenerateKeySequence.Text = "Generate key sequence";
+      this.buttonGenerateKeySequence.UseVisualStyleBackColor = true;
+      this.buttonGenerateKeySequence.Click += new System.EventHandler(this.Button_Click_GenerateKeySequence);
+      // 
+      // labelActualSequence
+      // 
+      this.labelActualSequence.AutoSize = true;
+      this.labelActualSequence.Location = new System.Drawing.Point(58, 142);
+      this.labelActualSequence.Name = "labelActualSequence";
+      this.labelActualSequence.Size = new System.Drawing.Size(139, 20);
+      this.labelActualSequence.TabIndex = 5;
+      this.labelActualSequence.Text = "Actual Sequence :";
+      // 
+      // labelActualSequenceIP
+      // 
+      this.labelActualSequenceIP.AutoSize = true;
+      this.labelActualSequenceIP.Location = new System.Drawing.Point(291, 142);
+      this.labelActualSequenceIP.Name = "labelActualSequenceIP";
+      this.labelActualSequenceIP.Size = new System.Drawing.Size(20, 20);
+      this.labelActualSequenceIP.TabIndex = 6;
+      this.labelActualSequenceIP.Text = "S";
       // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(673, 304);
-      this.Controls.Add(this.button);
+      this.Controls.Add(this.labelActualSequenceIP);
+      this.Controls.Add(this.labelActualSequence);
+      this.Controls.Add(this.buttonGenerateKeySequence);
       this.Controls.Add(this.labelKeySeries);
       this.Controls.Add(this.labelInstructions);
       this.Controls.Add(this.labelOKNOK);
@@ -105,7 +128,9 @@
     private System.Windows.Forms.Label labelOKNOK;
     private System.Windows.Forms.Label labelInstructions;
     private System.Windows.Forms.Label labelKeySeries;
-    private System.Windows.Forms.Button button;
+    private System.Windows.Forms.Button buttonGenerateKeySequence;
+    private System.Windows.Forms.Label labelActualSequence;
+    private System.Windows.Forms.Label labelActualSequenceIP;
   }
 }
 
