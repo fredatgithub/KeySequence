@@ -21,6 +21,7 @@ namespace KeySequence
       if (e.KeyCode == Keys.Right)
       {
         _keySequence += e.KeyCode.ToString();
+        _keySequence += "Right";
       }
 
       if (e.KeyCode == Keys.Left)
