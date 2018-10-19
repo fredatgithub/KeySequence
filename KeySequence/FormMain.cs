@@ -45,5 +45,30 @@ namespace KeySequence
     {
 
     }
+
+    private void FormMain_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.Right)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      if (e.KeyCode == Keys.Left)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      if (e.KeyCode == Keys.Up)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      if (e.KeyCode == Keys.Down)
+      {
+        _keySequence += e.KeyCode.ToString();
+      }
+
+      labelActualSequenceIP.Text += _keySequence;
+    }
   }
 }

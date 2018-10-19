@@ -97,9 +97,9 @@
       this.labelActualSequenceIP.AutoSize = true;
       this.labelActualSequenceIP.Location = new System.Drawing.Point(291, 142);
       this.labelActualSequenceIP.Name = "labelActualSequenceIP";
-      this.labelActualSequenceIP.Size = new System.Drawing.Size(20, 20);
+      this.labelActualSequenceIP.Size = new System.Drawing.Size(86, 20);
       this.labelActualSequenceIP.TabIndex = 6;
-      this.labelActualSequenceIP.Text = "S";
+      this.labelActualSequenceIP.Text = "Sequence:";
       // 
       // FormMain
       // 
@@ -116,6 +116,7 @@
       this.Name = "FormMain";
       this.Text = "Key Sequence";
       this.Load += new System.EventHandler(this.FormMain_Load);
+      this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyDown);
       this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormMain_KeyUp);
       this.ResumeLayout(false);
       this.PerformLayout();
